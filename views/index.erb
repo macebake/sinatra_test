@@ -1,3 +1,11 @@
-<h1>My name is <%=@cat_name%>!</h1>
+<form action="/named-cat" method="submit">
+  <div>
+    <label for="cat_name">Cat Name:</label>
+    <input type="test" name="cat_name" />
+    <input type='submit' value="Submit" />
+  </div>
+</form>
+
+<h1>My name is <%=@cat_name.nil? ? @cat_array : @cat_name %>!</h1>
 
 <img src=<%=@cat_pics%> style='border:3px dashed red'>
